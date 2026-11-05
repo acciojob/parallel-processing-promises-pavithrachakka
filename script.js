@@ -17,8 +17,8 @@ function downloadImage(url){
 	});
 }
 async function downloadImages(){
-	loading.style.display="block";
-	loading.innerHTML="Loading...";
+	loading.style.display='block';
+	loading.innerHTML='Loading...';
 	errorDiv.innerHTML="";
 	output.innerHTML="";
 	try{
@@ -27,10 +27,11 @@ async function downloadImages(){
 		loadedImages.forEach((img)=>{
 			output.appendChild(img);
 		});
+		loading.style.display='none';
 	}catch(error){
 		errorDiv.innerHTML=error.message;
 		}finally{
-		loading.style.display="none";
+		loading.style.display='none';
 		loading.innerHTML="";
 		
 		}
